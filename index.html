@@ -571,7 +571,7 @@
             <div class="form-group">
                 <label class="label-required">Equipe Responsável Inicial</label>
                 <select id="equipe-responsavel" required>
-                    <option value="">Selecione a equipe...</option>
+                    <option value=""></option>
                     <option selected>Selecione a equipe...</option>
                     <option>TRI - Tratamento de Respostas a Incidentes</option>
                     <option>NOC - Network Operations Center</option>
@@ -598,7 +598,7 @@
             </div>
             <div class="form-group">
                 <label class="label-required">Volume Estimado (Pico)</label>
-                <input type="text" id="volume-ataque" placeholder="Ex: 80 Gbps / 20 Mpps" value="80 Gbps / 20 Mpps" required>
+                <input type="text" id="volume-ataque" placeholder="Ex: 80 Gbps / 20 Mpps" value="" required>
             </div>
             <div class="form-group">
                 <label class="label-required">Severidade</label>
@@ -743,7 +743,7 @@
                 </div>
                 <div class="form-group">
                     <label>Data de Atribuição da Equipe</label>
-                    <input type="date" id="data-atribuicao" value="2024-03-15">
+                    <input type="date" id="data-atribuicao" value="">
                 </div>
             </div>
             
@@ -776,32 +776,32 @@
         
         <div class="timeline-container">
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-exclamation-triangle"></i> 14:30:01 - Primeira detecção</div>
+                <div class="timeline-time"><i class="fas fa-exclamation-triangle"></i> Primeira detecção</div>
                 <div class="timeline-description">Sistema detecta aumento de 500% no tráfego de entrada. Alertas enviados para NOC.</div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-bell"></i> 14:35:22 - Validação do incidente</div>
+                <div class="timeline-time"><i class="fas fa-bell"></i> Validação do incidente</div>
                 <div class="timeline-description">Equipe NOC confirma ataque DDoS via análise NetFlow. Classificado como Nível 2 (Alta severidade).</div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-user-shield"></i> 14:40:15 - Acionamento do CSIRT</div>
+                <div class="timeline-time"><i class="fas fa-user-shield"></i>  Acionamento do CSIRT</div>
                 <div class="timeline-description">CSIRT notificado via SaaS. Bridge de conferência estabelecida.</div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-cloud"></i> 14:45:30 - Mitigação com provedor</div>
+                <div class="timeline-time"><i class="fas fa-cloud"></i>   Mitigação com provedor</div>
                 <div class="timeline-description">Scrubbing ativado. Tráfego redirecionado para limpeza.</div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-chart-line"></i> 15:10:00 - Pico do ataque</div>
+                <div class="timeline-time"><i class="fas fa-chart-line"></i>  Pico do ataque</div>
                 <div class="timeline-description">Volume atinge 15.2 Gbps. 98% do link principal saturado.</div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time"><i class="fas fa-check-circle"></i> 15:45:30 - Início da recuperação</div>
+                <div class="timeline-time"><i class="fas fa-check-circle"></i>  Início da recuperação</div>
                 <div class="timeline-description">Tráfego malicioso reduzido em 90%. Serviços começam a normalizar.</div>
             </div>
         </div>
@@ -809,11 +809,11 @@
         <div class="grid" style="margin-top: 25px;">
             <div class="form-group">
                 <label>Timestamp de Contenção Efetiva</label>
-                <input type="datetime-local" id="timestamp-contencao" value="2024-03-15T15:15">
+                <input type="datetime-local" id="timestamp-contencao" value="">
             </div>
             <div class="form-group">
                 <label>Timestamp de Restauração Completa</label>
-                <input type="datetime-local" id="timestamp-restauracao" value="2024-03-15T16:30">
+                <input type="datetime-local" id="timestamp-restauracao" value="">
             </div>
         </div>
     </div>
@@ -830,7 +830,7 @@
                 <span class="mitigation-title"><i class="fas fa-broadcast-tower"></i> Amplificação / Reflexão</span>
                 <div class="checkbox-group">
                     <label class="checkbox-item"><input type="checkbox" class="mitigacao" value="bloqueio-udp"> Bloqueio de portas UDP (53, 123, 11211)</label>
-                    <label class="checkbox-item"><input type="checkbox" class="mitigacao" value="bcp38"> Implementação de BCP38 (Anti-Spoofing)</label>
+                    <label class="checkbox-item"><input type="checkbox" class="mitigacao" value=""> Implementação de BCP38 (Anti-Spoofing)</label>
                     <label class="checkbox-item"><input type="checkbox" class="mitigacao" value="blackholing"> Acionamento de Upstream Blackholing</label>
                 </div>
             </div>
@@ -1017,7 +1017,7 @@
                             <div>
                                 <label>Prazo</label>
                                 <select class="acao-prazo" style="width: 100%;">
-                                    <option selected> Selecione</option>
+                                    <option selected> Dias</option>
                                     <option >7 dias</option>
                                     <option>15 dias</option>
                                     <option>30 dias</option>
@@ -1041,7 +1041,7 @@
                             <div>
                                 <label>Prazo</label>
                                 <select class="acao-prazo" style="width: 100%;">
-                                    <option selected></option>
+                                    <option selected>Dias</option>
                                     <option>7 dias</option>
                                     <option>14 dias</option>
                                     <option>30 dias</option>
@@ -1055,8 +1055,8 @@
                     <div class="action-item" style="border-left-color: var(--cor-info);">
                         <div class="grid" style="gap: 10px;">
                             <div style="grid-column: span 2;">
-                                <label>Item de Ação 3</label>
-                                <textarea class="acao-descricao" placeholder="Descreva a ação de melhoria..." rows="2" style="width: 100%;">Atualizar playbook de resposta para incluir procedimentos específicos para ataques de amplificação DNS</textarea>
+                                <label>Item de Ação </label>
+                                <textarea class="acao-descricao" placeholder="Descreva a ação de melhoria..." rows="2" style="width: 100%;"></textarea>
                             </div>
                             <div>
                                 <label>Responsável</label>
@@ -1065,7 +1065,7 @@
                             <div>
                                 <label>Prazo</label>
                                 <select class="acao-prazo" style="width: 100%;">
-                                    <option selected> Escolha</option>
+                                    <option selected> Dias</option>
                                     <option >7 dias</option>
                                     <option>14 dias</option>
                                     <option >30 dias</option>
@@ -1212,7 +1212,7 @@
         // Adicionar cabeçalho de relatório
         const printHeader = `
             <div style="text-align: center; margin-bottom: 30px; border-bottom: 3px solid #2c3e50; padding-bottom: 20px; page-break-after: avoid;">
-                <h1 style="color: #2c3e50; margin-bottom: 10px;">RELATÓRIO OFICIAL DE INCIDENTE DDoS</h1>
+                <h1 style="color: #2c3e50; margin-bottom: 10px;">Registro de Incidentes</h1>
                 <h3 style="color: #34495e; margin-top: 0;">UFRGS - Centro de Processamento de Dados</h3>
                 <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px; font-size: 14px;">
                     <div><strong>ID do Incidente:</strong> ${incidentId}</div>
